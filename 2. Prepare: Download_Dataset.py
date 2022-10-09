@@ -28,7 +28,7 @@ print( f'There are {len( sav_set )} qualified stock symbols...' )
 sav_lst = list(sav_set)
 for ticker in sav_lst:
     try:
-        data = yf.download(i, start="2019-01-01", end="2022-09-02", group_by="Ticker",threads = True,auto_adjust = True)
+        data = yf.download(ticker, start="2019-01-01", end="2022-09-02", group_by="Ticker",threads = True,auto_adjust = True)
         data['Ticker'] = ticker
         data.to_csv(f'my_path\\ticker_{i}.csv')
     except (Exception, Error) as error:
