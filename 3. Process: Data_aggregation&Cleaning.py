@@ -6,7 +6,7 @@ from config import api_key
 from time import sleep
 
 # Set the path to the files
-p = Path('C:\\Users\\ferna\\Python\\2008_2020_US_Small_Cap\\2019_2020_data')
+p = Path('C:\\Python\\2008_2020_US_Small_Cap\\2019_2020_data')
 
 # Find the files; this is a generator, not a list
 files = p.glob('ticker_*.csv')
